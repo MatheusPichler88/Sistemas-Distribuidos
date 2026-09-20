@@ -117,5 +117,12 @@ Sincronismo - Em Sistemas distribuidos os nós precisam coordenar ações para
   - 
 
 
+aula 24/08
 
+Prova dia 28 até aula 5 do quadro branco
+- Atividades:
+    - pesquisar, compilar e disponibilizar nos githubs pessoais sobre Relógios Físicos e Lógicos. Exclusão Mútua e Eleição
+    - pesquisar e compilar sobre a teoria de poll de threads
+    - refazer o codigo ao inves de lista de Threads, usar pool.
+    
  

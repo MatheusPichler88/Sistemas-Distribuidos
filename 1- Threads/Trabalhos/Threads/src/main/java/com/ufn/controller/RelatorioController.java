@@ -14,7 +14,7 @@ public class RelatorioController {
         Random random = new Random();
         for (int i = 0; i < 4; i++) {
             List<Double> vendas = new ArrayList<>();
-            for (int j = 0; j < 100000; j++) {
+            for (int j = 0; j < 10000; j++) {
                 vendas.add(random.nextDouble() * 1000);
             }
             filiais.add(new Filial(vendas));
