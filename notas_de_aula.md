@@ -443,6 +443,24 @@ Por que HashMap?
   - a busca é direta pela chave, nao precisa percorrer a lista toda (pesquisa rapida)
 
 
+# Resumo da estrutura (quadro)
+
+Estrutura Cliente Servidor
+  - Heterogêneos
+  - TCP/IP: ip, domínio, porta, socket, udp, tcp
+  - Objetos:
+    - Socket e ServerSocket
+    - Escritor e leitor de socket
+    - Serialização
+  - Manual: Socket + leitor + escritor + serialização
+  - RPC
+    - RPC (qualquer linguagem)
+    - RMI Java: Interface -> Classe + Servidor + Cliente
+
+Estrutura Ponto a Ponto
+  - MultiCast: Grupo: IP de classe (faixa de IPs reservada pra grupo)
+
+
 # Pesquisas (atividades da aula 24/08)
 
 ## Pool de Threads
