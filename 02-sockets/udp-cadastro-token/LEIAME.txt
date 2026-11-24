@@ -1,0 +1,17 @@
+Trabalho - Cliente/Servidor via UDP
+
+Como rodar no NetBeans:
+  1) Rode o ServidorView.java (Shift+F6)
+  2) Rode o ClienteView.java (pode abrir mais de um)
+
+Classes UDP (mesma divisão do modelo do professor):
+  ComunicadorUDP  - montaMensagem, recebeMensagem, enviaMensagem 
+  RecebedorUDP    - lado do servidor, porta 1234
+  EnviadorUDP     - lado do cliente, envia e espera a resposta
+
+Mensagens trocadas:
+  CADASTRAR;nome;email   resposta: OK ou DUPLICADO
+  TOKEN;email            resposta: o token (ou NAO_CADASTRADO)
+
+Depois de cadastrado, o cliente pede o token sozinho a cada 10 segundos.
+O servidor mantém o mesmo token por 60 segundos e depois gera um novo.

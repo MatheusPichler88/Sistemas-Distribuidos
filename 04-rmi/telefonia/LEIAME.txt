@@ -1,0 +1,21 @@
+Desafio da Telefonia - Cliente/Servidor com RMI
+
+Como rodar no NetBeans:
+  1) Abra a pasta TelefoniaClienteServidor (File > Open Project).
+  2) Rode o JFrameServidor.java (Shift+F6) e clique em "Carregar".
+     A base telephony_sessions.txt vai para o HashMap e o servidor RMI inicia.
+  3) Rode o JFrameCliente.java (Shift+F6), clique em "Conectar",
+     digite um celular e clique em "Pesquisar".
+     Exemplo de número da base: 5592914942603
+
+Estrutura (MVC):
+  model/Sessao.java                  (do professor, sem alteração)
+  model/TabelaHash.java              (do professor, sem alteração)
+  utilidades/Util.java               (do professor, lê o arquivo para o HashMap)
+  controller/IConsultaSessao.java    interface remota (extends Remote)
+  controller/ConsultaSessao.java     objeto remoto (extends UnicastRemoteObject)
+  controller/Servidor.java           cria o registro e faz o Naming.bind
+  view/JFrameServidor                tela do professor; o Carregar inicia o Servidor
+  view/JFrameCliente                 Servidor IP + Conectar (Naming.lookup) + Pesquisar
+
+Para usar em computadores diferentes, digite no cliente o IP da máquina do servidor.
