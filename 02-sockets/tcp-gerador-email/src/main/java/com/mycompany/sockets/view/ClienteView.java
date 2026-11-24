@@ -116,7 +116,6 @@ public class ClienteView extends javax.swing.JFrame {
 
         Pessoa pessoa = new Pessoa(nome, dataNasc);
 
-        // Criação de Thread 
         new Thread(new Runnable() {
             @Override
             public void run() {

@@ -21,16 +21,13 @@ public class ServidorView extends javax.swing.JFrame {
     private DefaultListModel<String> modelLista;
     private final PessoaController controller = new PessoaController();
 
-    /**
-     * Creates new form ServidorView
-     */
     public ServidorView() {
         initComponents();
         this.setLocationRelativeTo(null);
         modelLista = new DefaultListModel<>();
         listPessoas.setModel(modelLista);
 
-        // Inicia a escuta do servidor
+        
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -45,12 +42,11 @@ public class ServidorView extends javax.swing.JFrame {
                 ServerSocket servidor = new ServerSocket(porta);
                 log("Servidor ouvindo a porta: " + porta);
 
-                //Loop para aceitar conexões contínuas
+                //Loop que aceitar conexões contínuas
                 while (true) {
                     final Socket cliente = servidor.accept();
                     log("Cliente conectado no IP: " + cliente.getInetAddress().getHostAddress());
 
-                    // Trata o atendimento do cliente em uma Thread separada
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
